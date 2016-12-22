@@ -66,8 +66,9 @@ table {
 	border: solid 3px black;
 	border-radius: 10px;
 	background: rgba(0,0,0,0.7);
+	transition: all 0.5s;
 	float: left;
-	margin: 10px;
+	margin-right: 15px;
 }
 
 .playing{

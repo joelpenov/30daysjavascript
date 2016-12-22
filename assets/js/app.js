@@ -1,4 +1,4 @@
-//letter-entry-template
+//joel
 
 var DRUMPS = DRUMPS || {};
 
@@ -70,7 +70,7 @@ var DRUMPS = DRUMPS || {};
 
 		self.init = function(){
 			view.init(data);
-		}	
+		}
 
 	};
 
@@ -80,8 +80,8 @@ var DRUMPS = DRUMPS || {};
 		var keysContainer = document.getElementById("keys-container");
 
 		self.init = function(entries){
-			keysContainer.innerHTML += "";	
-			self.renderEntries(entries);					
+			keysContainer.innerHTML += "";
+			self.renderEntries(entries);
 		}
 
 		self.renderEntries = function(entries){
@@ -97,8 +97,7 @@ var DRUMPS = DRUMPS || {};
 			addEventListener("keydown", function(event){
 				if(letterObject.letterCode === event.keyCode){
 					var currentElement = document.getElementById("letter-" + letterObject.letter);
-					var previousClasses = currentElement.className;
-					currentElement.className += " playing";
+					currentElement.classList.add("playing");
 					self.playAudio(letterObject.audio, currentElement);
 				}
 			});
@@ -110,7 +109,7 @@ var DRUMPS = DRUMPS || {};
 
 			soundPlaying.addEventListener("ended", function() 
 		     {
-		          element.className = "key-container";
+		          element.classList.remove("playing");
 		     });
 		}
 	};
